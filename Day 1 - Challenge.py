@@ -9,6 +9,8 @@ def runGame():
         valueInput = int(input(f"{i} x {userInput} = "))
         if valueInput == i * userInput:
             print('Great Work! 🥳')
+        else:
+            print(f'Sike! 😂 The answer is {i * userInput}')
 
 
 runGame()
