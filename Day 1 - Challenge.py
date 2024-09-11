@@ -2,13 +2,14 @@ import time
 print('Math Game!')
 
 userInput = int(input("Name your multiples: "))
-score = 0
 
 def runGame():
-    for i in range(1, 4):
-        valueInput = int(input(f"{i} x {userInput} = "))
+    for i in range(1, 11):
+        valueInput = int(input(f"{i} x {userInput} = \n"))
+        score = 0
         if valueInput == i * userInput:
-            print('Great Work! 🥳')
+            score += 1
+            print('Great Work! 🥳' or 'Flex!💅🏾')
         else:
             print(f'Sike! 😂 The answer is {i * userInput}')
 
