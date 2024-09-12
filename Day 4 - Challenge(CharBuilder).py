@@ -17,9 +17,9 @@ while True:
     run = mainGame()
     print(run)
     time.sleep(1)
-    menu = input("'Yes' or 'No', Again?:\n")
+    menu = input("Again?:\n")
     if menu.lower() == 'yes':
-        os.system('cls')
+        os.system("cls")
         time.sleep(1)
     else:
         break
