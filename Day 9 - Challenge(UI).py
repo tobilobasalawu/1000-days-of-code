@@ -7,7 +7,8 @@ print(f'{name:^17}')
 
 print('\nPREV')
 sec2 = 'NEXT'
-print(f'\033[32m {sec2: ^12}')
-
+print(f'\033[32m {sec2: ^14}')
+sec3 = 'PAUSE'
+print(f'\033[31m {sec3: ^30}')
 
 
