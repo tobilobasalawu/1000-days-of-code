@@ -16,3 +16,9 @@ for i in range(1, 101):
 print('\033[?25h', end="")
 
 '''
+
+def program(color, text):
+    print(color, end="")
+    print(text)
+
+program('\033[?25l', 'With my new program')
