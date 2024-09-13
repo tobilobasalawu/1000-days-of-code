@@ -1,7 +1,8 @@
 title = 'WELCOME TO'
 print(f'{title:^30}')
 
-
+subTitle = '--   ARMBOOK   --'
+print(f'\033[34m{subTitle:^30}')
 
 
 
