@@ -14,15 +14,12 @@ thirdText = 'networking site.'
 print(f'\033[m{thirdText:^53}\n')
 
 honest = 'Honest.'
-print(f'\033[31m{honest:^30}')
+print(f'\033[31m{honest:^30}\n')
 
+userName = 'Username:'
+passWord = 'Password:'
 
-
-
-
-
-
-
+print()
 
 
 
