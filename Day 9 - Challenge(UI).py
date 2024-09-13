@@ -8,7 +8,11 @@ firstText = 'Definitely not a rip off of'
 print(f'\033[m{firstText:^40}')
 
 seecondText = 'a certain other social'
-print(f'\033[m{seecondText:^50}')
+print(f'\033[m{seecondText:^45}')
+
+thirdText = 'networking site.'
+print(f'\033[m{thirdText:^53}')
+
 
 
 
