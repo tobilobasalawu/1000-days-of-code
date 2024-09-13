@@ -1,12 +1,14 @@
 title = 'WELCOME TO'
 print(f'{title:^30}')
 
-subTitle = '--   ARMBOOK   --'
+subTitle = '--   ARMBOOK   --\n'
 print(f'\033[34m{subTitle:^30}')
 
-firstText = '\nDefinitely not a rip off of'
+firstText = 'Definitely not a rip off of'
 print(f'\033[m{firstText:^40}')
 
+seecondText = 'a certain other social'
+print(f'\033[m{seecondText:^50}')
 
 
 
