@@ -5,5 +5,7 @@ name = 'Queen'
 print(f'\n🔥▶\033[0m{songName:^14}')
 print(f'{name:^17}')
 
+print('\nPREV')
+
 
 
