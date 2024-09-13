@@ -10,5 +10,5 @@ def newPrint(color, word):
 
 print("Super Subroutine")
 print("With my ", end="")
-newPrint('red', 'new program')
+newPrint('blue', 'new program')
 newPrint('reset', " I can just call red('and')")
