@@ -1,3 +1,5 @@
+title = 'WELCOME TO'
+print(f'{title:^30}')
 
 
 
