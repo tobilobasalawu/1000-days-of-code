@@ -4,6 +4,9 @@ print(f'{title:^30}')
 subTitle = '--   ARMBOOK   --'
 print(f'\033[34m{subTitle:^30}')
 
+firstText = '\nDefinitely not a rip off of'
+print(f'\033[m{firstText:^40}')
+
 
 
 
