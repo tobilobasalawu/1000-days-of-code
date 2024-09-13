@@ -11,9 +11,10 @@ seecondText = 'a certain other social'
 print(f'\033[m{seecondText:^45}')
 
 thirdText = 'networking site.'
-print(f'\033[m{thirdText:^53}')
+print(f'\033[m{thirdText:^53}\n')
 
-
+honest = 'Honest.'
+print(f'\033[31m{honest:^30}')
 
 
 
