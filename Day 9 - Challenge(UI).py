@@ -19,7 +19,8 @@ print(f'\033[31m{honest:^30}\n')
 userName = 'Username:'
 passWord = 'Password:'
 
-print()
+print(f'\033[m{userName:^30}')
+print(f'\033[m{passWord:^30}')
 
 
 
