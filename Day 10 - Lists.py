@@ -9,7 +9,7 @@ def toDo():
 
         if userInput == 'add':
             userAdd = input('What task do you want to add:\n')
-            task.append(userAdd)
+            task.append(userAdd.lower())
             print('\nTask Added🎉')
             for i in task:
                 print(f'{i}')
@@ -23,11 +23,8 @@ def toDo():
 
         elif userInput == 'edit':
             editInput = input('What task do you want to remove:\n')
-            for i in task:
-                if editInput != i:
-                    print('This task is invalid')
-                else:
-                    task.remove(editInput.lower())
+            task.remove(editInput.lower())
+            print('Task Removed ❌')
 
         else:
             print('\nInvalid Input, Select the Correct Option!')
