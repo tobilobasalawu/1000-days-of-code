@@ -1,5 +1,5 @@
 print('ToDo List Manager')
-task = []
+task = ['']
 
 def toDo():
     while True:
@@ -16,16 +16,18 @@ def toDo():
 
         elif userInput == 'view':
             for i in task:
-                if i == None:
+                if i == '':
                     print('No Tasks Available')
                 print(f'{i}')
 
 
         elif userInput == 'edit':
             editInput = input('What task do you want to remove:\n')
-            task.remove(editInput.lower())
             for i in task:
-                print(f'{i}')
+                if editInput != i:
+                    print('This task is invalid')
+                else:
+                    task.remove(editInput.lower())
 
         else:
             print('\nInvalid Input, Select the Correct Option!')
