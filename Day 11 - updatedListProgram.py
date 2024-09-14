@@ -1,5 +1,6 @@
 print('ToDo List Manager')
-task = ['']
+task = {''}
+print(task)
 
 def toDo():
     while True:
@@ -9,23 +10,34 @@ def toDo():
 
         if userInput == 'add':
             userAdd = input('What task do you want to add:\n')
-            task.append(userAdd.lower())
-            print('\nTask Added🎉')
+            task.add(userAdd.lower())
+            print('Task Added🎉')
             for i in task:
                 print(f'{i}')
 
         elif userInput == 'view':
             for i in task:
-                if i == '':
+                if task == {''}:
                     print('No Tasks Available')
                 print(f'{i}')
 
 
-        elif userInput == 'edit':
-            editInput = input('What task do you want to remove:\n')
-            task.remove(editInput.lower())
-            print('Task Removed ❌')
+        elif userInput == 'remove':
+            removeInput = input('What task do you want to remove:\n')
+            removeCheck = input(f"Are you sure you want to '{removeInput}'?\n")
+            if removeCheck.lower() == 'yes':
+                task.remove(removeInput.lower())
+                print('Task Removed ❌')
+            else:
+                print(f"'{removeInput}' has not been removed")
 
+        elif userInput == 'edit':
+            editInput = input("What do you edit to remove?\n")
+            editInput = editInput.lower()
+            changeInput = input("What do you want to change it to?\n")
+            changeInput= changeInput.lower()
+            task.remove(editInput)
+            task.add(changeInput)
         else:
             print('\nInvalid Input, Select the Correct Option!')
 
