@@ -4,8 +4,8 @@ while True:
     firstName = input('First Name: ')
     lastName = input('Last Name: ')
 
-    firstName = firstName.capitalize().strip()
-    lastName = lastName.capitalize().strip()
+    firstName = firstName.strip().capitalize()
+    lastName = lastName.strip().capitalize()
     fullName = f'{firstName} {lastName}\n'
 
     if fullName in names:
