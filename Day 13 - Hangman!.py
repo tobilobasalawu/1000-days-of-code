@@ -23,15 +23,17 @@ def runGame():
         elif userInput in wordlist:
             print('\nCorrect Guess!🎉')
             guessedWord.append(userInput)
-
         else:
             print('\nWrong Guess!')
             lives -= 1
             print(f'You have {lives} lives left')
 
+        if set(guessedWord) == set(wordlist):
+            print(f"You won, My man you're a star🎉🌹.\nThe word is {wordlist.upper()}")
+            break
+
     if lives == 0:
         print(f'\nYou Lost 😪, the word is {wordlist.upper()}')
-
 runGame()
 
 
