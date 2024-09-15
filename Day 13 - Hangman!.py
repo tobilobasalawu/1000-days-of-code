@@ -3,7 +3,7 @@ from urllib.parse import uses_netloc
 
 print('HANGMAN GAME💅🏾\n')
 
-wordlist = 'British'
+wordlist = 'wagawan'
 guessedWord = []
 lives = 6
 
@@ -14,4 +14,15 @@ def runGame():
                 print(i, end=" ")
             else:
                 print('_', ' ')
+
+        userInput = input("Enter a word:\n").lower()
+
+        if userInput in guessedWord:
+            print(f'You already guessed the letter {userInput}')
+            continue
+
+
+
+
+
 
