@@ -3,7 +3,8 @@ import time
 
 print('HANGMAN GAME💅')
 
-wordlist = 'Television'
+listword = ['television', 'grammar', 'software', 'intelligence']
+wordlist = random.choice(listword)
 guessedWord = []
 
 def runGame():
