@@ -9,8 +9,13 @@ print(randomWords)
 
 lives = 5
 
-userInput = input('Choose a Letter: ')
+def runGame():
+    while True:
+        userInput = input('Choose a Letter: ')
+        if userInput in randomWords:
+            print('You found a letter')
+        else:
+            print('Nope, not in there')
 
-if userInput in randomWords:
-    print('You found a letter')
 
+runGame()
