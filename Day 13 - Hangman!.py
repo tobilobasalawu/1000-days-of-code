@@ -4,13 +4,13 @@ import time
 print('HANGMAN GAME💅')
 
 listword = ['television', 'grammar', 'software', 'intelligence']
-wordlist = random.choice(listword)
+wordChoice = random.choice(listword)
 guessedWord = []
 
 def runGame():
     lives = 6
     while lives > 0:
-        for i in wordlist:
+        for i in wordChoice:
             if i in guessedWord:
                 time.sleep(0.6)
                 print(i, end=" ")
@@ -25,17 +25,17 @@ def runGame():
             time.sleep(0.8)
             print(f"\nYou already guessed the letter '{userInput}'")
 
-        elif userInput in wordlist:
+        elif userInput in wordChoice:
             print('\nCorrect Guess!🎉')
             guessedWord.append(userInput)
         else:
-            print('\nWrong Guess!')
+            print('\nWrong Guess!❌')
             lives -= 1
             time.sleep(1)
             print(f'You have {lives} lives left')
 
-        if set(guessedWord) == set(wordlist):
-            print(f"You won, My man you're a star🎉🌹.\nThe word is {wordlist.upper()}!")
+        if set(guessedWord) == set(wordChoice):
+            print(f"You won, My man you're a star🎉.\nThe word is {wordChoice.upper()}!")
             break
 
     if lives == 0:
@@ -43,7 +43,7 @@ def runGame():
         time.sleep(0.3)
         print(f"The word is", end=" ")
         time.sleep(0.8)
-        print(f"'{wordlist.upper()}'")
+        print(f"'{wordChoice.upper()}'")
 
 
 runGame()
