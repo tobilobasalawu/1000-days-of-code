@@ -1,5 +1,4 @@
 import random
-from urllib.parse import uses_netloc
 
 print('HANGMAN GAME💅🏾\n')
 
@@ -16,13 +15,13 @@ def runGame():
                 print('_', end=' ')
         print()
 
-        userInput = input("Enter a word:\n").lower()
+        userInput = input("\nEnter a word:\n").lower()
 
         if userInput in guessedWord:
-            print(f'You already guessed the letter {userInput}')
+            print(f"\nYou already guessed the letter '{userInput}'")
 
         elif userInput in wordlist:
-            print('\nCorrect Guess!')
+            print('\nCorrect Guess!🎉')
             guessedWord.append(userInput)
 
         else:
@@ -31,7 +30,7 @@ def runGame():
             print(f'You have {lives} lives left')
 
     if lives == 0:
-        print(f'\nYou Lost the word is {wordlist.upper()}')
+        print(f'\nYou Lost 😪, the word is {wordlist.upper()}')
 
 runGame()
 
