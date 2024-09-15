@@ -21,6 +21,11 @@ def runGame():
             print(f'You already guessed the letter {userInput}')
             continue
 
+        elif userInput in wordlist:
+            print('Correct Guess!')
+            guessedWord.append(userInput)
+
+
 
 
 
