@@ -1,0 +1,2 @@
+print('HANGMAN GAME💅🏾\n')
+
