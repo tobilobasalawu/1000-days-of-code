@@ -30,7 +30,8 @@ def runGame():
             lives -= 1
             print(f'You have {lives} lives left')
 
-
+    if lives == 0:
+        print(f'\nYou Lost the word is {wordlist.upper()}')
 
 runGame()
 
