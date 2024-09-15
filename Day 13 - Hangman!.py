@@ -1,8 +1,9 @@
 import random
+import time
 
-print('HANGMAN GAME💅🏾\n')
+print('HANGMAN GAME💅')
 
-wordlist = 'wagawan'
+wordlist = 'intelligence'
 guessedWord = []
 
 def runGame():
@@ -29,11 +30,13 @@ def runGame():
             print(f'You have {lives} lives left')
 
         if set(guessedWord) == set(wordlist):
-            print(f"You won, My man you're a star🎉🌹.\nThe word is {wordlist.upper()}")
+            print(f"You won, My man you're a star🎉🌹.\nThe word is {wordlist.upper()}!")
             break
 
     if lives == 0:
         print(f'\nYou Lost 😪, the word is {wordlist.upper()}')
+
+
 runGame()
 
 
