@@ -1,7 +1,8 @@
 print('MokéBeast')
 
 beastName = input("Beast Name: ")
-type = input("Type: ")
+beastType = input("Type: ")
 specialMove = input("Special Move: ")
 hp = input("HP: ")
+mp = input("MP: ")
 
