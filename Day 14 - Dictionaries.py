@@ -7,8 +7,11 @@ for name, values in myDictionary.items():
 '''
 name = input("name: ")
 url = input("url: ")
+desc = input("desc: ")
+rating = input("rating: ")
+
+web = {'name': name, 'url': url, 'desc': desc, 'rating': rating}
 
 
-example = {"myValue" : None}
 
 #print(example)
