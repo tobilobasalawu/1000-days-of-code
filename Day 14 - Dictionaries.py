@@ -12,6 +12,8 @@ rating = input("rating: ")
 
 web = {'name': name, 'url': url, 'desc': desc, 'rating': rating}
 
-
+for key, values in web.items():
+    print()
+    print(f'{key}: {values}')
 
 #print(example)
