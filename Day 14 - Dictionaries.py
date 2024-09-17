@@ -5,5 +5,9 @@ for name, values in myDictionary.items():
     print(f"{name} : {values}")
 
 '''
+name = input("name: ")
+
 
 example = {"myValue" : None}
+
+#print(example)
