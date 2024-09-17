@@ -18,7 +18,7 @@ def runGame():
             print(f'\033[34m{key}: {values}')
         elif beast['Type'].lower() == 'air':
             print(f'\033[32m{key}: {values}')
-
-
+        else:
+            print(f'{key}: {values}')
 
 runGame()
