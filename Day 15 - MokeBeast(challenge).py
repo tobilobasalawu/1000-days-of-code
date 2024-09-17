@@ -15,7 +15,7 @@ def runGame():
         if beast['Type'].lower() == 'fire':
             print(f'\033[31m{key}: {values}')
         elif beast['Type'].lower() == 'water':
-            print(f'033[34m{key}: {values}')
+            print(f'\033[34m{key}: {values}')
 
 
 
