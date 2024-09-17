@@ -6,6 +6,7 @@ for name, values in myDictionary.items():
 
 '''
 name = input("name: ")
+url = input("url: ")
 
 
 example = {"myValue" : None}
