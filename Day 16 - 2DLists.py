@@ -3,4 +3,6 @@ my2DList = [
     ['Sian', 19, 'PC'],
     ['Jonny', 10, 'Mac']
 ]
-print(my2DList)
+
+newLists = my2DList[0][1]
+print(newLists)
