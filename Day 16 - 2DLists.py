@@ -10,4 +10,5 @@ print(my2DList[0])
 
 '''
 
-print('BINGO CARD')
+import random
+print("David's Nan's Bingo Card Generator")
