@@ -22,3 +22,10 @@ for i in range(8):
 numbers.sort()
 
 print()
+
+bingo = [
+        [ numbers[0], numbers[1], numbers[2] ],
+        [numbers[3], "BINGO", numbers[4]],
+        [numbers[5], numbers[6], numbers[7]]
+]
+
