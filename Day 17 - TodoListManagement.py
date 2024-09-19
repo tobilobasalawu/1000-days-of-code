@@ -38,6 +38,8 @@ def todoProgram():
             for row in todoList:
                 if removeTask in row:
                     todoList.remove(row)
+                else:
+                    print(f"No Task named '{removeTask}' is stored ")
 
 
 todoProgram()
