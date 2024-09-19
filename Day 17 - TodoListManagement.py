@@ -1,3 +1,5 @@
+from os import remove
+
 print("TODO LIST MANAGEMENT APP")
 todoList = []
 
@@ -25,5 +27,7 @@ def todoProgram():
                     elif levelPriority not in row:
                         print(f"No Priority named '{levelPriority}' is stored ")
 
+        elif menu.lower() == 'remove':
+            removeTask = input("What would you like to remove?\n> ")
 
 todoProgram()
