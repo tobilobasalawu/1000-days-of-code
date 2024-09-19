@@ -18,14 +18,15 @@ def todoProgram():
             viewMenu = int(input("\n1: View All\n2: View Priority\n\n> "))
             if viewMenu == 1:
                 for row in todoList:
-                    print(f"{row[0]:^10}|{row[1]:^10}|{row[2]:^10}")
+                    print(f"{item}:^10, end=' | '")
             elif viewMenu == 2:
                 levelPriority = input("Which Priority: ")
                 for row in todoList:
-                    if levelPriority in row:
-                        print(f"{row[0]}\t|\t{row[1]:^10}|{row[2]:^10}")
-                    elif levelPriority not in row:
-                        print(f"No Priority named '{levelPriority}' is stored ")
+                    for item in row:
+                        if levelPriority in row:
+                            print(f"{item}:^10, end=' | '")
+                        elif levelPriority not in row:
+                            print(f"No Priority named '{levelPriority}' is stored ")
 
         elif menu.lower() == 'remove':
             removeTask = input("What would you like to remove?\n> ").lower()
