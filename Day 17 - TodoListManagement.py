@@ -53,10 +53,10 @@ def todoProgram():
             elif menu == 4:
                 print('EDIT\n')
 
-                newTitle = input("New title: ")
-                newDate = input("New Due date: ")
-                newPriority = input("New Priority: ")
-                edit = [newTitle, newDate, newPriority]
+                task = input("New title: ")
+                taskTime = input("New Due date: ")
+                taskPriority = input("New Priority: ")
+                edit = [task.lower(), taskTime.lower(), taskPriority.lower()]
 
                 todoList.append(edit)
                 print('\nUpdated')
