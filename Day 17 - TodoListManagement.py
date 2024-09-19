@@ -18,13 +18,14 @@ def todoProgram():
             viewMenu = int(input("\n1: View All\n2: View Priority\n\n> "))
             if viewMenu == 1:
                 for row in todoList:
-                    print(f"{item}:^10, end=' | '")
+                    for item in row:
+                        print(f"{item}:^10", end=' | ')
             elif viewMenu == 2:
                 levelPriority = input("Which Priority: ")
                 for row in todoList:
                     for item in row:
                         if levelPriority in row:
-                            print(f"{item}:^10, end=' | '")
+                            print(f"{item}:^10", end=' | ')
                         elif levelPriority not in row:
                             print(f"No Priority named '{levelPriority}' is stored ")
 
