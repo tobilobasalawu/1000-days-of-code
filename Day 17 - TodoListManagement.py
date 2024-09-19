@@ -22,6 +22,8 @@ def todoProgram():
                 for row in todoList:
                     if levelPriority in row:
                         print(f"{row[0]:^10}|{row[1]:^10}|{row[2]:^10}")
+                    elif levelPriority not in row:
+                        print(f"No Priority named '{levelPriority}' is stored ")
 
 
 todoProgram()
