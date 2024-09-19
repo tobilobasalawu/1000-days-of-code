@@ -6,3 +6,4 @@ def todoProgram():
     if menu.lower() == 'add' or '1':
         task = input("\nWhat is it? ")
         taskTime = input("\nWhat is it due? ")
+        taskPriority = input("\nHow Important? ")
