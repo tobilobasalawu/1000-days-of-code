@@ -50,7 +50,16 @@ def todoProgram():
                 else:
                     print(f"No Task named '{removeTask}' is stored ")
 
-            #elif menu == 4:
+            elif menu == 4:
+                print('EDIT\n')
+
+                newTitle = input("New title: ")
+                newDate = input("New Due date: ")
+                newPriority = input("New Priority: ")
+
+                print('\nUpdated')
+
+
         except ValueError:
             print("Please select a number from the menu")
 
