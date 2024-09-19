@@ -5,15 +5,15 @@ todoList = []
 
 def todoProgram():
     while True:
-        menu = input("\n1: Add\n2: View\n3: Remove\n4: Edit\n\n> ")
-        if menu.lower() == 'add':
+        menu = int(input("\n1: Add\n2: View\n3: Remove\n4: Edit\n\n> "))
+        if menu == 1:
             print('ADD')
             task = input("\nWhat is it? ")
             taskTime = input("What is it due? ")
             taskPriority = input("How Important? ")
             row = [task.lower(), taskTime.lower(), taskPriority.lower()]
             todoList.append(row)
-        elif menu.lower() == 'view':
+        elif menu == 2:
             print('VIEW')
             viewMenu = int(input("\n1: View All\n2: View Priority\n\n> "))
             if viewMenu == 1:
@@ -36,7 +36,7 @@ def todoProgram():
                     else:
                         print(f"No Priority named '{levelPriority}' is stored ")
 
-        elif menu.lower() == 'remove':
+        elif menu == 3:
             removeTask = input("What would you like to remove?\n> ").lower()
             for row in todoList:
                 if removeTask in row:
@@ -46,6 +46,8 @@ def todoProgram():
                     print()
                 else:
                     print(f"No Task named '{removeTask}' is stored ")
+
+        #elif menu == 4:
 
 
 todoProgram()
