@@ -56,7 +56,9 @@ def todoProgram():
                 newTitle = input("New title: ")
                 newDate = input("New Due date: ")
                 newPriority = input("New Priority: ")
+                edit = [newTitle, newDate, newPriority]
 
+                todoList.append(edit)
                 print('\nUpdated')
 
 
