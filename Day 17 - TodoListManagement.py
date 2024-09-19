@@ -28,24 +28,25 @@ def todoProgram():
 
             elif viewMenu == 2:
                 levelPriority = input("Which Priority: ")
-                for row in todoList:
-                    if levelPriority in row:
+                if levelPriority in todoList:
+                    for row in todoList:
                         for item in row:
                             print(f"{item:^10}", end=' | ')
                         print()
-                    else:
-                        print(f"No Priority named '{levelPriority}' is stored ")
+                else:
+                    print(f"No Priority named '{levelPriority}' is stored ")
 
         elif menu == 3:
             removeTask = input("What would you like to remove?\n> ").lower()
-            for row in todoList:
-                if removeTask in row:
+            if removeTask in todoList:
+                for row in todoList:
                     for item in row:
                         todoList.remove(row)
                         print(f"{item:^10}", end=' | ')
                     print()
-                else:
-                    print(f"No Task named '{removeTask}' is stored ")
+
+            else:
+                print(f"No Task named '{removeTask}' is stored ")
 
         #elif menu == 4:
 
