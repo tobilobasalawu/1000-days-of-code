@@ -15,6 +15,7 @@ def todoProgram():
             print('VIEW')
             viewMenu = int(input("\n1: View All\n2: View Priority\n\n> "))
             if viewMenu == 1:
-                print(todoList)
+                for row in todoList:
+                    print(f"{row[0]:^40}|{row[1]:^40}|{row[2]}")
 
 todoProgram()
