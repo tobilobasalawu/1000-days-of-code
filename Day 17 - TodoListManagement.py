@@ -17,5 +17,10 @@ def todoProgram():
             if viewMenu == 1:
                 for row in todoList:
                     print(f"{row[0]:^10}|{row[1]:^10}|{row[2]:^10}")
+            elif viewMenu == 2:
+                levelPriority = input("Which Priority: ")
+                for row in todoList:
+                    #if levelPriority in row:
+
 
 todoProgram()
