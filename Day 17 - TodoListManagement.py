@@ -11,7 +11,7 @@ def todoProgram():
             task = input("\nWhat is it? ")
             taskTime = input("What is it due? ")
             taskPriority = input("How Important? ")
-            row = [task, taskTime, taskPriority]
+            row = [task.lower(), taskTime.lower(), taskPriority.lower()]
             todoList.append(row)
         elif menu.lower() == 'view':
             print('VIEW')
@@ -23,11 +23,15 @@ def todoProgram():
                 levelPriority = input("Which Priority: ")
                 for row in todoList:
                     if levelPriority in row:
-                        print(f"{row[0]:^10}\t|{row[1]:^10}|{row[2]:^10}")
+                        print(f"{row[0]}\t|\t{row[1]:^10}|{row[2]:^10}")
                     elif levelPriority not in row:
                         print(f"No Priority named '{levelPriority}' is stored ")
 
         elif menu.lower() == 'remove':
-            removeTask = input("What would you like to remove?\n> ")
+            removeTask = input("What would you like to remove?\n> ").lower()
+            for row in todoList:
+                if removeTask in row:
+                    todoList.remove(row)
+
 
 todoProgram()
