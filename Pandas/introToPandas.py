@@ -5,4 +5,8 @@ import pandas as pd
 # print(df.tail(3)) Use tail to check bottom roles, use head for top rows
 
 df = pd.read_csv("pokemon_data.txt", delimiter="\t")
-print(df)
+#print(df)
+
+print(df.columns) #To print headers
+
+print(df['Name']) #Printing out names
