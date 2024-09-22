@@ -10,5 +10,8 @@ df = pd.read_csv("pokemon_data.txt", delimiter="\t")
 #print(df.columns) #To print headers
 
 #print(df[['Name', 'Type 1']]) #Printing out names
-print(df.iloc[1:4]) # index location
+#print(df.iloc[1:4]) # index location
+
+for index,row in df.iterrows():
+    print(index,row['Name'])
 
