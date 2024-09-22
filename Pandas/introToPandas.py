@@ -7,6 +7,8 @@ import pandas as pd
 df = pd.read_csv("pokemon_data.txt", delimiter="\t")
 #print(df)
 
-print(df.columns) #To print headers
+#print(df.columns) #To print headers
 
-print(df['Name']) #Printing out names
+#print(df[['Name', 'Type 1']]) #Printing out names
+print(df.iloc[1:4]) # index location
+
