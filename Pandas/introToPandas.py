@@ -12,6 +12,8 @@ df = pd.read_csv("pokemon_data.txt", delimiter="\t")
 #print(df[['Name', 'Type 1']]) #Printing out names
 #print(df.iloc[1:4]) # index location
 
-for index,row in df.iterrows():
-    print(index,row['Name'])
+#for index,row in df.iterrows():
+#    print(index,row['Name'])
 
+#print(df.loc[df['Type 1'] == 'Fire'])
+print(df.describe())
