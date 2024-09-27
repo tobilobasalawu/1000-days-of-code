@@ -1,7 +1,21 @@
 def diagonalDifference(arr):
-    leftD = arr[0][0] + arr[1][1] + arr[2][2]
-    rightD = arr[0][2] + arr[1][1] + arr[2][0]
+    n = len(arr)
+    left_to_right = 0
+    right_to_left = 0
 
-    return abs(leftD - rightD)
+    for i in range(n):
+        left_to_right += arr[i][i]
+        right_to_left += arr[i][n - i - 1]
 
-print(diagonalDifference([[-1,1,-7,-8], [-10, -8, -5, -2], [0, 9,7, -1], [4,4,-2,1]]))
+    return abs(left_to_right - right_to_left)
+
+
+# Example usage:
+arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [9, 8, 9]
+]
+
+result = diagonalDifference(arr)
+print(result)  # Output: 2
