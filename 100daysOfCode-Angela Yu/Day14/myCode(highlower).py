@@ -1,3 +1,5 @@
+from replit import clear
+
 from gameData import data
 from art import logo,vs
 import random
@@ -41,6 +43,7 @@ def main():
         else:
             print(f"You're wrong, your final score: {score}")
             break
+            clear()
 
 main()
 
