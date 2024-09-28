@@ -22,16 +22,17 @@ for i in range(2):
     user_cards.append(deal_card())
     computer_cards.append(deal_card())
 
-user_score = calculate_score(user_cards)#calculating user score
-computer_score = calculate_score(computer_cards) #calculating computer score
-print(f"Your Cards: {user_cards}, current score: {user_score}\n Computer's Card: {computer_cards[0]}")
+while not game_over:
+    user_score = calculate_score(user_cards)#calculating user score
+    computer_score = calculate_score(computer_cards) #calculating computer score
+    print(f"Your Cards: {user_cards}, current score: {user_score}\n Computer's Card: {computer_cards[0]}")
 
-if user_score == 0 or computer_score == 0 or user_score > 21:#game ends if blackjack in user&computer or greater than 21
-    game_over = True
-else:
-    userInput = input("Type 'y' to get another card, type 'n' to pass: ")
-    if userInput == 'y':
-        user_cards.append(deal_card()) #if user selects another card, it should be added to current crad list
+    if user_score == 0 or computer_score == 0 or user_score > 21:#game ends if blackjack in user&computer or greater than 21
+        game_over = True
     else:
-        game_over=True
+        userInput = input("Type 'y' to get another card, type 'n' to pass: ")
+        if userInput == 'y':
+            user_cards.append(deal_card()) #if user selects another card, it should be added to current card list
+        else:
+            game_over=True
 
