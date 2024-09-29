@@ -23,6 +23,8 @@ def main():
                 nickleInput = int(input("how many nickles?: "))
                 penniesInput = int(input("how many pennies?: "))
                 total = (quarterInput * quarter) + (dimeInput * dime) + (nickleInput * nickle) + (penniesInput * penny)
+                if total > MENU['latte']['cost']:
+                    costChange = total - MENU['latte']['cost']
 
 
             elif defaultWater < MENU['latte']['ingredients']['water'] and defaultMilk > MENU['latte']['ingredients']['milk'] and  defaultCoffee > MENU['latte']['ingredients']['coffee']:
