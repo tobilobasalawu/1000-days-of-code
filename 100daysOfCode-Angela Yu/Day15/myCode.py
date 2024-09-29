@@ -23,3 +23,6 @@ MENU = {
         "cost": 3.0,
     }
 }
+
+
+userRequest = input("What would you like? (espresso/latte/cappuccino):\n").lower()
