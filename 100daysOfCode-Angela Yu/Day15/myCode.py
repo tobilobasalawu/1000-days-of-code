@@ -5,6 +5,11 @@ defaultCoffee = MENU['default']['coffee']
 defaultMoney = MENU['default']['money']
 power = True
 
+dime = 0.10
+quarter = 0.25
+nickle = 0.05
+penny = 0.01
+
 def main():
     while power:
         userRequest = input("What would you like? (espresso/latte/cappuccino):\n").lower()
@@ -17,6 +22,9 @@ def main():
                 dimeInput = int(input("how many dimes?: "))
                 nickleInput = int(input("how many nickles?: "))
                 penniesInput = int(input("how many pennies?: "))
+                total = (quarterInput * quarter) + (dimeInput * dime) + (nickleInput * nickle) + (penniesInput * penny)
+
+
             elif defaultWater < MENU['latte']['ingredients']['water'] and defaultMilk > MENU['latte']['ingredients']['milk'] and  defaultCoffee > MENU['latte']['ingredients']['coffee']:
                 print('Sorry there is not enough water.')
             elif defaultWater > MENU['latte']['ingredients']['water'] and defaultMilk < MENU['latte']['ingredients']['milk'] and  defaultCoffee > MENU['latte']['ingredients']['coffee']:
