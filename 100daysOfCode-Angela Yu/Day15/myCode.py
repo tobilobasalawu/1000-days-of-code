@@ -11,6 +11,6 @@ def main():
     elif userRequest == 'latte':
         if defaultWater > MENU['latte']['ingredients']['water'] and defaultMilk > MENU['latte']['ingredients']['milk'] and  defaultCoffee > MENU['latte']['ingredients']['coffee']:
             print('Please Insert Coins')
-
+            quarterInput = input("how many quarters?: ")
 
 main()
