@@ -11,9 +11,13 @@ def main():
     elif userRequest == 'latte':
         if defaultWater > MENU['latte']['ingredients']['water'] and defaultMilk > MENU['latte']['ingredients']['milk'] and  defaultCoffee > MENU['latte']['ingredients']['coffee']:
             print('Please Insert Coins')
-            quarterInput = input("how many quarters?: ")
-            dimeInput = input("how many dimes?: ")
-            nickleInput = input("how many nickles?: ")
-            penniesInput = input("how many pennies?: ")
+            quarterInput = int(input("how many quarters?: "))
+            dimeInput = int(input("how many dimes?: "))
+            nickleInput = int(input("how many nickles?: "))
+            penniesInput = int(input("how many pennies?: "))
+        elif defaultWater < MENU['latte']['ingredients']['water'] and defaultMilk > MENU['latte']['ingredients']['milk'] and  defaultCoffee > MENU['latte']['ingredients']['coffee']:
+            print('Sorry there is not enough water.')
+
+
 
 main()
