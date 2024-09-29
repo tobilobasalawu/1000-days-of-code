@@ -74,6 +74,7 @@ def main():
             elif defaultWater > MENU['espresso']['ingredients']['water'] and defaultCoffee < MENU['espresso']['ingredients']['coffee']:
                 print('Sorry there is not enough coffee.')
 
+
         elif userRequest == 'cappuccino':
             if defaultWater > MENU['cappuccino']['ingredients']['water'] and defaultMilk > MENU['cappuccino']['ingredients'][
                 'milk'] and defaultCoffee > MENU['cappuccino']['ingredients']['coffee']:
@@ -83,13 +84,13 @@ def main():
                 nickleInput = int(input("how many nickles?: "))
                 penniesInput = int(input("how many pennies?: "))
                 total = (quarterInput * quarter) + (dimeInput * dime) + (nickleInput * nickle) + (penniesInput * penny)
-                if total > MENU['espresso']['cost']:
+                if total > MENU['cappuccino']['cost']:
                     defaultWater -= MENU['cappuccino']['ingredients']['water']
                     defaultMilk -= MENU['cappuccino']['ingredients']['milk']
                     defaultCoffee -= MENU['cappuccino']['ingredients']['coffee']
                     defaultMoney += MENU['cappuccino']['cost']
 
-                    costChange = total - MENU['espresso']['cost']
+                    costChange = total - MENU['cappuccino']['cost']
                     print(f'\nHere is ${costChange} in change.\nHere is your cappuccino ☕. Enjoy!')
                 else:
                     print("Sorry that's not enough money. Money refunded.")
@@ -104,6 +105,11 @@ def main():
             elif defaultWater > MENU['cappuccino']['ingredients']['water'] and defaultMilk > MENU['cappuccino']['ingredients'][
                 'milk'] and defaultCoffee < MENU['cappuccino']['ingredients']['coffee']:
                 print('Sorry there is not enough coffee.')
+            else:
+                print('Sorry there is not enough water.')
+
+        else:
+            print('Choose the options displayed')
 
 
 main()
