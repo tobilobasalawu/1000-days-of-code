@@ -13,5 +13,6 @@ def main():
             print('Please Insert Coins')
             quarterInput = input("how many quarters?: ")
             dimeInput = input("how many dimes?: ")
+            nickleInput = input("how many nickles?: ")
 
 main()
