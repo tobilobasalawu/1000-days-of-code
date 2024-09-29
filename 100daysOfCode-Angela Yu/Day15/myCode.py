@@ -29,7 +29,7 @@ def main():
                     defaultCoffee -= MENU['latte']['ingredients']['coffee']
                     defaultMoney += MENU['latte']['cost']
 
-                    costChange = total - MENU['latte']['cost']
+                    costChange = round(total - MENU['latte']['cost'], 2)
                     print(f'\nHere is ${costChange} in change.\nHere is your latte ☕. Enjoy!')
                 else:
                     print("Sorry that's not enough money. Money refunded.")
@@ -64,7 +64,7 @@ def main():
                     defaultCoffee -= MENU['espresso']['ingredients']['coffee']
                     defaultMoney += MENU['espresso']['cost']
 
-                    costChange = total - MENU['espresso']['cost']
+                    costChange = round(total - MENU['espresso']['cost'], 2)
                     print(f'\nHere is ${costChange} in change.\nHere is your espresso ☕. Enjoy!')
                 else:
                     print("Sorry that's not enough money. Money refunded.")
@@ -92,7 +92,7 @@ def main():
                     defaultCoffee -= MENU['cappuccino']['ingredients']['coffee']
                     defaultMoney += MENU['cappuccino']['cost']
 
-                    costChange = total - MENU['cappuccino']['cost']
+                    costChange = round(total - MENU['cappuccino']['cost'])
                     print(f'\nHere is ${costChange} in change.\nHere is your cappuccino ☕. Enjoy!')
                 else:
                     print("Sorry that's not enough money. Money refunded.")
@@ -111,7 +111,7 @@ def main():
                 print('Sorry there is not enough water.')
 
         else:
-            print('Choose the options displayed')
+            break
 
 
 main()
