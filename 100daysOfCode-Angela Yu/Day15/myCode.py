@@ -15,8 +15,8 @@ def main():
     while power:
         userRequest = input("\nWhat would you like? (espresso/latte/cappuccino):\n").lower()
         if userRequest == 'latte':
-            if defaultWater > MENU['latte']['ingredients']['water'] and defaultMilk > MENU['latte']['ingredients'][
-                'milk'] and defaultCoffee > MENU['latte']['ingredients']['coffee']:
+            if defaultWater >= MENU['latte']['ingredients']['water'] and defaultMilk >= MENU['latte']['ingredients'][
+                'milk'] and defaultCoffee >= MENU['latte']['ingredients']['coffee']:
                 print('\nPlease Insert Coins')
                 quarterInput = int(input("how many quarters?: "))
                 dimeInput = int(input("how many dimes?: "))
@@ -52,7 +52,7 @@ def main():
 
 
         elif userRequest == 'espresso':
-            if defaultWater > MENU['espresso']['ingredients']['water'] and defaultCoffee > MENU['espresso']['ingredients']['coffee']:
+            if defaultWater >= MENU['espresso']['ingredients']['water'] and defaultCoffee >= MENU['espresso']['ingredients']['coffee']:
                 print('\nPlease Insert Coins')
                 quarterInput = int(input("how many quarters?: "))
                 dimeInput = int(input("how many dimes?: "))
@@ -73,11 +73,13 @@ def main():
                 print('Sorry there is not enough water.')
             elif defaultWater > MENU['espresso']['ingredients']['water'] and defaultCoffee < MENU['espresso']['ingredients']['coffee']:
                 print('Sorry there is not enough coffee.')
+            else:
+                print('Not enough water')
 
 
         elif userRequest == 'cappuccino':
-            if defaultWater > MENU['cappuccino']['ingredients']['water'] and defaultMilk > MENU['cappuccino']['ingredients'][
-                'milk'] and defaultCoffee > MENU['cappuccino']['ingredients']['coffee']:
+            if defaultWater >= MENU['cappuccino']['ingredients']['water'] and defaultMilk >= MENU['cappuccino']['ingredients'][
+                'milk'] and defaultCoffee >= MENU['cappuccino']['ingredients']['coffee']:
                 print('\nPlease Insert Coins')
                 quarterInput = int(input("how many quarters?: "))
                 dimeInput = int(input("how many dimes?: "))
