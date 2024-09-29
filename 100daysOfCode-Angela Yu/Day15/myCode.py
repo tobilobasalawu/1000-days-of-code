@@ -14,5 +14,6 @@ def main():
             quarterInput = input("how many quarters?: ")
             dimeInput = input("how many dimes?: ")
             nickleInput = input("how many nickles?: ")
+            penniesInput = input("how many pennies?: ")
 
 main()
