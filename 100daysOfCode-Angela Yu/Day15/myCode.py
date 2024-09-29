@@ -74,5 +74,36 @@ def main():
             elif defaultWater > MENU['espresso']['ingredients']['water'] and defaultCoffee < MENU['espresso']['ingredients']['coffee']:
                 print('Sorry there is not enough coffee.')
 
+        elif userRequest == 'cappuccino':
+            if defaultWater > MENU['cappuccino']['ingredients']['water'] and defaultMilk > MENU['cappuccino']['ingredients'][
+                'milk'] and defaultCoffee > MENU['cappuccino']['ingredients']['coffee']:
+                print('\nPlease Insert Coins')
+                quarterInput = int(input("how many quarters?: "))
+                dimeInput = int(input("how many dimes?: "))
+                nickleInput = int(input("how many nickles?: "))
+                penniesInput = int(input("how many pennies?: "))
+                total = (quarterInput * quarter) + (dimeInput * dime) + (nickleInput * nickle) + (penniesInput * penny)
+                if total > MENU['espresso']['cost']:
+                    defaultWater -= MENU['cappuccino']['ingredients']['water']
+                    defaultMilk -= MENU['cappuccino']['ingredients']['milk']
+                    defaultCoffee -= MENU['cappuccino']['ingredients']['coffee']
+                    defaultMoney += MENU['cappuccino']['cost']
+
+                    costChange = total - MENU['espresso']['cost']
+                    print(f'\nHere is ${costChange} in change.\nHere is your cappuccino ☕. Enjoy!')
+                else:
+                    print("Sorry that's not enough money. Money refunded.")
+
+
+            elif defaultWater < MENU['cappuccino']['ingredients']['water'] and defaultMilk > MENU['cappuccino']['ingredients'][
+                'milk'] and defaultCoffee > MENU['cappuccino']['ingredients']['coffee']:
+                print('Sorry there is not enough water.')
+            elif defaultWater > MENU['cappuccino']['ingredients']['water'] and defaultMilk < MENU['cappuccino']['ingredients'][
+                'milk'] and defaultCoffee > MENU['cappuccino']['ingredients']['coffee']:
+                print('Sorry there is not enough milk.')
+            elif defaultWater > MENU['cappuccino']['ingredients']['water'] and defaultMilk > MENU['cappuccino']['ingredients'][
+                'milk'] and defaultCoffee < MENU['cappuccino']['ingredients']['coffee']:
+                print('Sorry there is not enough coffee.')
+
 
 main()
