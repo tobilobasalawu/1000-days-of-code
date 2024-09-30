@@ -2,6 +2,7 @@ operation = ''
 addname = ''
 addpassowrd = ''
 userID = ''
+update = ''
 
 def userManagement(operation, addname, addpassowrd: str) -> str:
     operation = input("What operation: ").lower()
@@ -28,7 +29,7 @@ def userManagement(operation, addname, addpassowrd: str) -> str:
         else:
             print('Wrong Username')
 
-    if operation.lower() == 'delete':
+    elif operation.lower() == 'remove':
         if userID == 'default':
             details['default']['username'] = None
             details['default']['password'] = None
@@ -37,6 +38,20 @@ def userManagement(operation, addname, addpassowrd: str) -> str:
             print(details)
         else:
             print('Wrong Username')
+
+    elif operation.lower() == 'update':
+        update = in
+        addname = input("Enter new username: ").lower()
+        addpassowrd = input("Enter new password: ").lower()
+        if userID == 'default':
+            details['default']['username'] = addname
+            details['default']['password'] = addpassowrd
+
+            print('New Password and UserName has been set')
+        else:
+            print('Wrong Username')
+
+
 
 
 userManagement(operation, addname, addpassowrd)
