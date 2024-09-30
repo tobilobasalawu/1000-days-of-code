@@ -53,7 +53,7 @@ def userManagement():
                 print(details)
 
             elif operation == 'quit':
-                print('program Ended')
+                print('\nprogram Ended')
                 break
 
             else:
