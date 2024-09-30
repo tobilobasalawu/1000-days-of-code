@@ -6,8 +6,8 @@ update = ''
 
 def userManagement(operation, addname, addpassowrd, update: str) -> str:
     operation = input("What operation: ").lower()
-    userpassword = '242425'
-    username = 'aser'
+    userpassword = 'default'
+    username = 'default'
 
     details = {
         'default': {
@@ -40,20 +40,26 @@ def userManagement(operation, addname, addpassowrd, update: str) -> str:
             print('Wrong Username')
 
     elif operation.lower() == 'update':
-        update = input('What do you want to update').lower()
+        update = input('What do you want to update: ').lower()
         if userID == 'default':
-            details['default']['username'] = addname
-            details['default']['password'] = addpassowrd
             if update == 'username':
                 addname = input("Enter new username: ").lower()
                 print('UserName updated')
+                details['default']['username'] = addname
             elif update == 'password':
                 addpassowrd = input("Enter new password: ").lower()
+                print('Password updated')
+                details['default']['password'] = addpassowrd
             elif update == 'both':
                 addname = input("Enter new username: ").lower()
                 addpassowrd = input("Enter new password: ").lower()
+                print('New Password and UserName has been set')
+                details['default']['username'] = addname
+                details['default']['password'] = addpassowrd
             else:
                 print('Enter the correct Detail')
+
+            print(details)
         else:
             print('Wrong Username')
 
