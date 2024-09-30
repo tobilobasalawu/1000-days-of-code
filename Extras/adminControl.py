@@ -67,8 +67,6 @@ def userManagement():
         else:
             print('Incorrect ID')
 
-
-
 userManagement()
 
 
