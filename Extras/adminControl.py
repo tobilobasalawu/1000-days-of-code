@@ -1,8 +1,7 @@
-operation = input("What operation: ")
-addname = input("What the users details name: ")
-addpassowrd = input("What password you want the users: ")
-username = input("What username you want the users: ")
-
+operation = input("What operation: ").lower()
+addname = input("Enter new username: ").lower()
+addpassowrd = input("Enter new password: ").lower()
+username = input("The user ID ").lower()
 
 def userManagement(operation, addname, addpassowrd, username: str) -> str:
     userpassword = '242425'
@@ -10,20 +9,23 @@ def userManagement(operation, addname, addpassowrd, username: str) -> str:
 
     details = {
         'userdefault': {
-            'username': username,
-            'password': userpassword
+            'username': addname,
+            'password': addpassowrd
         }
     }
+
     if operation.lower() == 'add':
-        username = input('Whats the user name: ')
-        if username == details['userdefault']:
-            addname = input("Enter username: ")
-            addpassowrd = input("Enter password: ")
+        username = username
+        if username == 'userdefault':
+            addname = addname
+            addpassowrd = addpassowrd
 
             details['userdefault']['username'] = addname
             details['userdefault']['password'] = addpassowrd
 
-            print('Done')
+            print(details)
+        else:
+            print('Wrong Username')
 
 
 userManagement(operation, addname, addpassowrd, username)
