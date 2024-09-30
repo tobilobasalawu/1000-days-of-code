@@ -1,9 +1,3 @@
-operation = ''
-addname = ''
-addpassowrd = ''
-userID = ''
-update = ''
-
 
 def userManagement():
     while True:
