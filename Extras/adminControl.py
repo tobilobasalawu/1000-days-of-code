@@ -1,10 +1,3 @@
-operation = ''
-addname = ''
-addpassowrd = ''
-userID = ''
-update = ''
-
-
 def userManagement():
     while True:
         operation = input("What operation 'add', 'remove', 'update', or 'quit': ").lower()
