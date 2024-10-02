@@ -1,4 +1,8 @@
-def userDetail(addname, addpassowrd):
+def main():
+    userDetail(name, passcode)
+
+
+def userDetail(addname, addpassowrd : str) -> str:
     userpassword = 'default'
     username = 'default'
 
@@ -9,6 +13,8 @@ def userDetail(addname, addpassowrd):
         }
     }
 
+name = input("Enter new username: ").lower()
+passcode = input("Enter new password: ").lower()
 
 
 
