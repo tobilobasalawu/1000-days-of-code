@@ -47,24 +47,24 @@ def operationAlgorithm(addname, addpassowrd, details):
 
         print(details)
 
-    elif operation == 'quit':
-        print('program Ended')
-
     else:
         print("Select the correct option")
 
 
-def main():
+def initial():
     userDetail(name, passcode)
     if userID == 'default':
         operationAlgorithm(name, passcode, details)
     else:
         print('Incorrect ID')
 
-main()
 
 
-
+def main():
+    while operation != "quit":
+        initial()
+        if operation == 'quit':
+            break
 
 
 
