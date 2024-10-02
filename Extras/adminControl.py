@@ -2,9 +2,11 @@ operation = input("What operation 'add', 'remove', 'update', or 'quit': ").lower
 userID = input("The user ID: ").lower()
 def main():
     userDetail(name, passcode)
+    if userID == 'default':
 
-
-def userDetail(addname, addpassowrd : str) -> str:
+    else:
+        print('Incorrect ID')
+def userDetail(addname, addpassowrd, details : str) -> str:
     userpassword = 'default'
     username = 'default'
 
@@ -19,11 +21,8 @@ name = input("Enter new username: ").lower()
 passcode = input("Enter new password: ").lower()
 
 
-
-if userID == 'default':
+def operationAlgorithm(addname, addpassword, details):
     if operation.lower() == 'add':
-        addname = input("Enter new username: ").lower()
-        addpassowrd = input("Enter new password: ").lower()
         if userID == 'default':
             details['default']['username'] = addname
             details['default']['password'] = addpassowrd
@@ -42,16 +41,12 @@ if userID == 'default':
     elif operation.lower() == 'update':
         update = input('What do you want to update: ').lower()
         if update == 'username':
-            addname = input("Enter new username: ").lower()
             print('UserName updated')
             details['default']['username'] = addname
         elif update == 'password':
-            addpassowrd = input("Enter new password: ").lower()
             print('Password updated')
             details['default']['password'] = addpassowrd
         elif update == 'both':
-            addname = input("Enter new username: ").lower()
-            addpassowrd = input("Enter new password: ").lower()
             print('New Password and UserName has been set')
             details['default']['username'] = addname
             details['default']['password'] = addpassowrd
@@ -62,12 +57,9 @@ if userID == 'default':
 
     elif operation == 'quit':
         print('program Ended')
-        break
 
     else:
         print("Select the correct option")
-else:
-    print('Incorrect ID')
 
 
 
