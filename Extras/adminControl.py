@@ -1,3 +1,5 @@
+operation = input("What operation 'add', 'remove', 'update', or 'quit': ").lower()
+userID = input("The user ID: ").lower()
 def main():
     userDetail(name, passcode)
 
@@ -18,8 +20,6 @@ passcode = input("Enter new password: ").lower()
 
 
 
-operation = input("What operation 'add', 'remove', 'update', or 'quit': ").lower()
-userID = input("The user ID: ").lower()
 if userID == 'default':
     if operation.lower() == 'add':
         addname = input("Enter new username: ").lower()
