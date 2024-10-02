@@ -2,6 +2,8 @@ operation = input("What operation 'add', 'remove', 'update', or 'quit': ").lower
 userID = input("The user ID: ").lower()
 name = input("Enter new username: ").lower()
 passcode = input("Enter new password: ").lower()
+
+
 details = {
         'default': {
             'username': name,
@@ -9,11 +11,19 @@ details = {
         }
     }
 
+def initial():
+    userDetail(name, passcode)
+    if userID == 'default':
+        operationAlgorithm(name, passcode, details)
+    else:
+        print('Incorrect ID')
+
+
 def userDetail(addname, addpassowrd: str) -> str:
     userpassword = 'default'
     username = 'default'
 
-def operationAlgorithm(addname, addpassowrd, details):
+def operationAlgorithm(addname, addpassowrd, details: str) -> str:
     if operation.lower() == 'add':
         if userID == 'default':
             details['default']['username'] = addname
@@ -51,20 +61,15 @@ def operationAlgorithm(addname, addpassowrd, details):
         print("Select the correct option")
 
 
-def initial():
-    userDetail(name, passcode)
-    if userID == 'default':
-        operationAlgorithm(name, passcode, details)
-    else:
-        print('Incorrect ID')
-
 
 
 def main():
     while operation != "quit":
         initial()
         if operation == 'quit':
+            print('Program Ended')
             break
+
 
 
 
