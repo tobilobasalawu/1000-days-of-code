@@ -59,9 +59,10 @@ def operationAlgorithm(addname, addpassowrd, details, newID: str) -> str:
         print(details)
 
     elif operation.lower() == 'useradd':
-        details.update(str(newID))
+        details.update({newID : 'newId'})
         print(details)
-        details[str(newID)].update({'username': addname, 'password': addpassowrd})
+        #details[str(newID)].update({'username': addname, 'password': addpassowrd})
+        #print('New User Added')
 
     else:
         print("Select the correct option")
@@ -77,5 +78,5 @@ def main():
             break
 
 
-
+print(details)
 
