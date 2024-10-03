@@ -3,7 +3,6 @@ userID = input("The user ID: ").lower()
 name = input("Enter new username: ").lower()
 passcode = input("Enter new password: ").lower()
 
-
 details = {
         'default': {
             'username': name,
