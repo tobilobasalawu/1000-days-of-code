@@ -1,4 +1,4 @@
-operation = input("What operation 'add', 'remove', 'update', or 'quit': ").lower()
+operation = input("What operation 'add', 'remove', 'useradd','update', or 'quit': ").lower()
 userID = input("The user ID: ").lower()
 name = input("Enter new username: ").lower()
 passcode = input("Enter new password: ").lower()
@@ -55,6 +55,9 @@ def operationAlgorithm(addname, addpassowrd, details: str) -> str:
             print('Enter the correct Detail')
 
         print(details)
+
+    elif operation.lower() == 'useradd':
+
 
     else:
         print("Select the correct option")
