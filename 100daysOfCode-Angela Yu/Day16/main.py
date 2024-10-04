@@ -14,5 +14,15 @@
 # myScreen = Screen()
 # print(myScreen.canvheight)
 # myScreen.exitonclick()
-
 from prettytable import PrettyTable
+table = PrettyTable()
+#print(tb)
+
+table.field_names = ["Pokemon Name", "Type"]
+table.add_rows([
+    ["Pikachu", 'Electric'],
+    ["Squirtle", "Water"],
+    ["Charmander", 'Fire'],
+])
+
+print(table)
