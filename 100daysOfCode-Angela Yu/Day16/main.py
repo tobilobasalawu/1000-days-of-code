@@ -14,3 +14,5 @@
 # myScreen = Screen()
 # print(myScreen.canvheight)
 # myScreen.exitonclick()
+
+from prettytable import PrettyTable
