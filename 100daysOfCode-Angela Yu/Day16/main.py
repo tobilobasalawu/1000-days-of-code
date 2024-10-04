@@ -25,6 +25,6 @@ table.add_rows([
     ["Charmander", 'Fire'],
 ])
 
-table.align = 'r'
+table.align = 'l'
 
 print(table)
