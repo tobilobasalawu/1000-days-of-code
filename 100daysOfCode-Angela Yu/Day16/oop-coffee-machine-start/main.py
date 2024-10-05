@@ -17,6 +17,9 @@ def Main():
             coffeeMoney.report()
             coffeeMake.report()
 
+        elif menuInput == 'espresso':
+            coffeeMoney.process_coins()
+
         elif menuInput == 'quit':
             coffeeMachine = False
             print('\nCoffee Machine, Turned Off')
