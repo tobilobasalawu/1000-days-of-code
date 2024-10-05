@@ -22,6 +22,9 @@ def Main():
         elif menuInput == 'latte':
             coffeeMoney.make_payment(coffeeMenu.find_drink(menuInput).cost)
 
+        elif menuInput == 'cappuccino':
+            coffeeMoney.make_payment(coffeeMenu.find_drink(menuInput).cost)
+
         elif menuInput == 'quit':
             coffeeMachine = False
             print('\nCoffee Machine, Turned Off')
