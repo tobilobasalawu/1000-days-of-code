@@ -7,8 +7,10 @@ def Main():
     menuInput = input(f"What would you like? ({coffeeMenu.get_items()}): ").lower()
 
     coffeeMoney = MoneyMachine()
+    coffeeMake = CoffeeMaker()
 
     if menuInput == 'report':
         coffeeMoney.report()
+        coffeeMake.report()
 
 Main()
