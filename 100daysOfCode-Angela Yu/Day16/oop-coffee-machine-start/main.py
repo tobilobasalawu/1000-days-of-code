@@ -1,16 +1,18 @@
 from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
+coffeeMachine = True
 
 def Main():
-    coffeeMenu = Menu()
-    menuInput = input(f"What would you like? ({coffeeMenu.get_items()}): ").lower()
+    while coffeeMachine:
+        coffeeMenu = Menu()
+        menuInput = input(f"\nWhat would you like? ({coffeeMenu.get_items()}):\n").lower()
 
-    coffeeMoney = MoneyMachine()
-    coffeeMake = CoffeeMaker()
+        coffeeMoney = MoneyMachine()
+        coffeeMake = CoffeeMaker()
 
-    if menuInput == 'report':
-        coffeeMoney.report()
-        coffeeMake.report()
+        if menuInput == 'report':
+            coffeeMoney.report()
+            coffeeMake.report()
 
 Main()
