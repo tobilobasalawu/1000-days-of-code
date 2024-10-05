@@ -4,6 +4,6 @@ from money_machine import MoneyMachine
 
 def Main():
     coffeeMenu = Menu()
-    print(coffeeMenu.get_items())
+    menuInput = input(f"What would you like? ({coffeeMenu.get_items()}):")
 
 Main()
