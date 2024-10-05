@@ -7,20 +7,21 @@ coffeeMenu = Menu()
 coffeeMoney = MoneyMachine()
 coffeeMake = CoffeeMaker()
 
-def Main():
-    coffeeMachine = True
-    while coffeeMachine:
-        menuInput = input(f"\nWhat would you like? ({coffeeMenu.get_items()}):\n").lower()
-        if menuInput == 'report':
-            coffeeMoney.report()
-            coffeeMake.report()
+while coffeeMachine:
+    menuInput = input(f"\nWhat would you like? ({coffeeMenu.get_items()}):\n").lower()
+    if menuInput == 'report':
+        coffeeMoney.report()
+        coffeeMake.report()
 
-        else:
-            drink = coffeeMenu.find_drink(menuInput)
-            if coffeeMake.is_resource_sufficient(drink) and coffeeMoney.make_payment(drink):
-                coffeeMake.make_coffee()
+    elif menuInput == 'quit':
+        coffeeMachine = False
 
-
-Main()
-
+    else:
+        drink = coffeeMenu.find_drink(menuInput)
+        isSufficient = coffeeMake.is_resource_sufficient(drink)
+        isPayment = coffeeMoney.make_payment(drink.cost)
+        if isSufficient and isPayment:
+            coffeeMake.make_coffee(drink)
+        elif not isSufficient:
+            isSufficient
 
