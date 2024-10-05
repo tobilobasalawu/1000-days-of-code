@@ -11,14 +11,13 @@ def Main():
     coffeeMachine = True
     while coffeeMachine:
         menuInput = input(f"\nWhat would you like? ({coffeeMenu.get_items()}):\n").lower()
-        change = coffeeMoney.make_payment(coffeeMenu.find_drink(menuInput).cost)
 
         if menuInput == 'report':
             coffeeMoney.report()
             coffeeMake.report()
 
         elif menuInput == 'espresso':
-            print(change)
+            coffeeMoney.make_payment(coffeeMenu.find_drink(menuInput).cost)
 
         elif menuInput == 'quit':
             coffeeMachine = False
