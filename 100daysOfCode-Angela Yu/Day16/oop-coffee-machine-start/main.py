@@ -21,7 +21,6 @@ while coffeeMachine:
         isSufficient = coffeeMake.is_resource_sufficient(drink)
         isPayment = coffeeMoney.make_payment(drink.cost)
         if isSufficient and isPayment:
+            #coffeeMoney.process_coins()
             coffeeMake.make_coffee(drink)
-        elif not isSufficient:
-            isSufficient
 
