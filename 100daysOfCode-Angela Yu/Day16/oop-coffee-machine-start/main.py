@@ -4,9 +4,11 @@ from money_machine import MoneyMachine
 
 def Main():
     coffeeMenu = Menu()
-    menuInput = input(f"What would you like? ({coffeeMenu.get_items()}):")
+    menuInput = input(f"What would you like? ({coffeeMenu.get_items()}): ").lower()
 
     coffeeMoney = MoneyMachine()
 
+    if menuInput == 'report':
+        coffeeMoney.report()
 
 Main()
