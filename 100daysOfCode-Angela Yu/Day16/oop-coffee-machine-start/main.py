@@ -6,4 +6,7 @@ def Main():
     coffeeMenu = Menu()
     menuInput = input(f"What would you like? ({coffeeMenu.get_items()}):")
 
+    coffeeMoney = MoneyMachine()
+
+
 Main()
