@@ -29,6 +29,9 @@ def Main():
             coffeeMachine = False
             print('\nCoffee Machine, Turned Off')
 
+        else:
+            coffeeMenu.find_drink(menuInput)
+
 Main()
 
 
