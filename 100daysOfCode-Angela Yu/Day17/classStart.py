@@ -1,11 +1,8 @@
 class User:
-    def __init__(self, userId, name):
+    def __init__(self, userId, userName):
         self.id = userId
+        self.name = userName
 
 
-
-user_1 = User()
-user_1.id = '001'
-user_1.name = 'Tobi'
-
-print(user_1.name)
+user_1 = User('s45561076', 'Tobi Salawu')
+print(user_1.id, user_1.name)
