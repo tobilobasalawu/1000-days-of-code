@@ -10,3 +10,5 @@ print(user_1.id, user_1.name)
 
 user_2 = User('s4610859', 'Biology')
 print(user_2.id)
+
+print(user_2.followers)
