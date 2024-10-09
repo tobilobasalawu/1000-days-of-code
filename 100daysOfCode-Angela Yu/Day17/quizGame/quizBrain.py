@@ -4,3 +4,5 @@ class QuizBrain:
         self.questionList = q_list
 
     def nextQuestion(self):
+        currentQues = self.questionList[self.questionNumber]
+        userAnswerInput = input(f"Q.{self.questionNumber}: {currentQues.text} (True/False): ")
