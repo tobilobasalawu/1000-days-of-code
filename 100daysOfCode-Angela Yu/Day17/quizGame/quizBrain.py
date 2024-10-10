@@ -3,6 +3,9 @@ class QuizBrain:
         self.questionNumber = 0
         self.questionList = q_list
 
+    def stillHasQuestion(self):
+        return self.questionNumber < len(self.questionList)
+
     def nextQuestion(self):
         currentQues = self.questionList[self.questionNumber]
         self.questionNumber = self.questionNumber + 1

@@ -8,4 +8,9 @@ for question in question_data:
     questionBank.append(questions)
 
 quiz = QuizBrain(questionBank)
-quiz.nextQuestion()
+
+while quiz.stillHasQuestion():
+    quiz.nextQuestion()
+
+
+
