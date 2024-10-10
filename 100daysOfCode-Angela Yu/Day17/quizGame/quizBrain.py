@@ -10,3 +10,11 @@ class QuizBrain:
         currentQues = self.questionList[self.questionNumber]
         self.questionNumber = self.questionNumber + 1
         userAnswerInput = input(f"Q.{self.questionNumber}: {currentQues.text} (True/False): ")
+        self.checkAnswer(userAnswerInput, currentQues.answer)
+
+    def checkAnswer(self, userAnswerInput, correctAnswer):
+        if userAnswerInput.lower() == correctAnswer.lower():
+            print('You got it right!')
+        else:
+            print("That's Wrong")
+        print(f"The correct answer is {correctAnswer}")
