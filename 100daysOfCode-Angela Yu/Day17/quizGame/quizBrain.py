@@ -19,4 +19,4 @@ class QuizBrain:
             self.userScore += 1
         else:
             print("That's Wrong")
-        print(f"The correct answer is {correctAnswer}\nYour current score is {self.userScore}/{self.questionNumber}")
+        print(f"The correct answer is {correctAnswer}\nYour current score is {self.userScore}/{self.questionNumber}\n")
