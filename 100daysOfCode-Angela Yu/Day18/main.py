@@ -30,11 +30,13 @@ def triangle():
 def pentagon():
     turtle.color('brown')
     for i in range(5):
-
+        turtle.forward(100)
+        turtle.rt(72)
 
 def mainTurtle():
     square()
     triangle()
+    pentagon()
 
 mainTurtle()
 
