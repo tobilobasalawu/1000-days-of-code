@@ -1,5 +1,4 @@
 from turtle import Turtle, Screen
-import random
 
 turtle = Turtle()
 turtle.shape('turtle')
@@ -27,6 +26,9 @@ def triangle():
     for i in range(3):
         turtle.forward(100)
         turtle.rt(120)
+
+def pentagon():
+    turtle.color('brown')
 
 def mainTurtle():
     square()
