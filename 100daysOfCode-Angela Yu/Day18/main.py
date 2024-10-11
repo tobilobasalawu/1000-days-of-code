@@ -57,6 +57,9 @@ def nonagon():
         turtle.forward(100)
         turtle.rt(40)
 
+def decagon():
+
+
 def mainTurtle():
     square()
     triangle()
