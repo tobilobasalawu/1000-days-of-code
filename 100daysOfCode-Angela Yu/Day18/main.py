@@ -41,12 +41,16 @@ def hexagon():
 
 def heptagon():
     turtle.color('black')
+    for i in range(7):
+        turtle.forward(100)
+        turtle.rt(51.43)
 
 def mainTurtle():
     square()
     triangle()
     pentagon()
     hexagon()
+    heptagon()
 
 mainTurtle()
 
