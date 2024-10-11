@@ -25,6 +25,11 @@ def square():
 
 
 
+def mainTurtle():
+    square()
+
+mainTurtle()
+
 
 
 
