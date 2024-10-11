@@ -46,7 +46,7 @@ def heptagon():
         turtle.rt(51.43)
 
 def octagon():
-    turtle.color('aliceblue')
+    turtle.color('dark khaki')
     for i in range(8):
         turtle.forward(100)
         turtle.rt(45)
