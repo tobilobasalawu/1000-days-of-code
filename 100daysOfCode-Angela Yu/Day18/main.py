@@ -35,6 +35,8 @@ def pentagon():
 
 def hexagon():
     turtle.color('green')
+    for i in range(6):
+        tu
 
 def mainTurtle():
     square()
