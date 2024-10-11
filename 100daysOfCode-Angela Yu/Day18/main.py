@@ -40,7 +40,7 @@ def hexagon():
         turtle.rt(60)
 
 def heptagon():
-
+    turtle.color('black')
 
 def mainTurtle():
     square()
