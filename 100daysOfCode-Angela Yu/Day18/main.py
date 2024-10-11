@@ -34,7 +34,7 @@ def pentagon():
         turtle.rt(72)
 
 def hexagon():
-
+    turtle.color('green')
 
 def mainTurtle():
     square()
