@@ -39,6 +39,9 @@ def hexagon():
         turtle.forward(100)
         turtle.rt(60)
 
+def heptagon():
+
+
 def mainTurtle():
     square()
     triangle()
