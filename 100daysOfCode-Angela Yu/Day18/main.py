@@ -52,6 +52,7 @@ def octagon():
         turtle.rt(45)
 
 def nonagon():
+    turtle.color('DarkOrange1')
 
 
 def mainTurtle():
