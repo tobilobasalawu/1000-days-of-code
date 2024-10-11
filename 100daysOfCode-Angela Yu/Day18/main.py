@@ -17,15 +17,13 @@ turtle.shape('turtle')
 
 
 def square():
-    ranColour = random.choice(['red', 'blue', 'green', 'brown'])
     for i in range(4):
-        turtle.color(ranColour)
+        turtle.color('blue')
         turtle.forward(90)
         turtle.rt(90)
 
 def triangle():
-    ranColour = random.choice(['red', 'blue', 'green', 'brown'])
-    turtle.color(ranColour)
+    turtle.color('red')
     for i in range(3):
         turtle.forward(100)
         turtle.rt(120)
