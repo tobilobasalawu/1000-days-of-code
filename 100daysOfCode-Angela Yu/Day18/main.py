@@ -53,7 +53,9 @@ def octagon():
 
 def nonagon():
     turtle.color('DarkOrange1')
-
+    for i in range(9):
+        turtle.forward(100)
+        turtle.rt(40)
 
 def mainTurtle():
     square()
