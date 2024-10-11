@@ -33,6 +33,9 @@ def pentagon():
         turtle.forward(100)
         turtle.rt(72)
 
+def hexagon():
+
+
 def mainTurtle():
     square()
     triangle()
