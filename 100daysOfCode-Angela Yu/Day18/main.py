@@ -45,6 +45,11 @@ def heptagon():
         turtle.forward(100)
         turtle.rt(51.43)
 
+def octagon():
+
+
+
+
 def mainTurtle():
     square()
     triangle()
