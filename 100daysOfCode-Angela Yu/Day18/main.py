@@ -29,6 +29,8 @@ def triangle():
 
 def pentagon():
     turtle.color('brown')
+    for i in range(5):
+
 
 def mainTurtle():
     square()
