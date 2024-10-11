@@ -58,7 +58,10 @@ def nonagon():
         turtle.rt(40)
 
 def decagon():
-
+    turtle.color('dark salmon')
+    for i in range(10):
+        turtle.forward(100)
+        turtle.rt(36)
 
 def mainTurtle():
     square()
@@ -68,6 +71,7 @@ def mainTurtle():
     heptagon()
     octagon()
     nonagon()
+    decagon()
 
 mainTurtle()
 
