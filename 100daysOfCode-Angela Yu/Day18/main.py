@@ -26,11 +26,9 @@ def square():
 def triangle():
     ranColour = random.choice(['red', 'blue', 'green', 'brown'])
     turtle.color(ranColour)
-    turtle.forward(100)
-    turtle.rt(120)
-    turtle.forward(100)
-    turtle.rt(120)
-    turtle.forward(100)
+    for i in range(3):
+        turtle.forward(100)
+        turtle.rt(120)
 
 def mainTurtle():
     square()
