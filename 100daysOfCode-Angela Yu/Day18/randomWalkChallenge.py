@@ -7,6 +7,7 @@ color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'Dar
 pos = [0, 90, 180, 270]
 
 
+for i in range(200):
 
 
 screen = Screen()
