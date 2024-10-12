@@ -11,8 +11,8 @@ def randomColour():
     b = random.choice(255)
     return (r,g,b)
 
-
-txl.circle(100)
+for i in range(10):
+    txl.circle(100)
 
 
 
