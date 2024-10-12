@@ -1,5 +1,8 @@
 from turtle import Turtle, Screen
 
+from numpy.ma.core import angle
+from openpyxl.utils import range_boundaries
+
 turtle = Turtle()
 turtle.shape('turtle')
 
@@ -15,13 +18,12 @@ turtle.shape('turtle')
 #     turtle.pendown()
 
 def drawShape(noOfSides):
-    turtle.forward(100)
-    turtle.rt(noOfSides)
+    for i in noOfSides:
+        angle = 360 / noOfSides
+        turtle.forward(100)
+        turtle.rt(angle)
 
 
-def mainTurtle():
-
-mainTurtle()
 
 
 
