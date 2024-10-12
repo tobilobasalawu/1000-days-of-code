@@ -12,6 +12,7 @@ def randomColour():
     return (r,g,b)
 
 for i in range(10):
+    txl.color(randomColour())
     txl.circle(100)
 
 
