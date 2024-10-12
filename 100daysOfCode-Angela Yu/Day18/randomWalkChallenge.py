@@ -24,7 +24,8 @@ def random2():
         turtle.rt(random.choice(pos))
 
 def main():
-
+    second = [random1(), random2()]
+    random.choice(second)
 
 main()
 
