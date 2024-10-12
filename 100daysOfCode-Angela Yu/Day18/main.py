@@ -18,7 +18,7 @@ turtle.shape('turtle')
 color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'DarkGoldenrod1', 'OrangeRed3', 'lavender blush', 'misty rose', 'dark slate gray']
 
 def drawShape(noOfSides):
-
+    turtle.color(random.choice(color))
     for i in range(noOfSides):
         angle = 360 / noOfSides
         turtle.forward(100)
