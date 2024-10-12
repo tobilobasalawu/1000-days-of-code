@@ -23,6 +23,7 @@ def random2():
         turtle.forward(30)
         turtle.rt(random.choice(pos))
 
+def main():
 
 
 main()
