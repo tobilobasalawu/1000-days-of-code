@@ -11,8 +11,10 @@ def randomColour():
     b = random.randint(0,255)
     return (r,g,b)
 
-for i in range(10):
+for i in range(100):
     txl.color(randomColour())
+    txl.speed('fastest')
+    txl.left(5)
     txl.circle(100)
 
 
