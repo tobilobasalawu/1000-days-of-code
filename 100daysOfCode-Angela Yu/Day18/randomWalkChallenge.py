@@ -7,7 +7,7 @@ color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'Dar
 pos = [90, 180, 360]
 
 def random1():
-    for i in range(20):
+    for i in range(100):
         turtle.color(random.choice(color))
         turtle.speed(9)
         turtle.pensize(10)
@@ -16,7 +16,7 @@ def random1():
 
 
 def random2():
-    for i in range(40):
+    for i in range(100):
         turtle.color(random.choice(color))
         turtle.speed(9)
         turtle.pensize(10)
