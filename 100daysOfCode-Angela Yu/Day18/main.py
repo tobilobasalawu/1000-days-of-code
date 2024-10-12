@@ -1,7 +1,5 @@
 from turtle import Turtle, Screen
-
-from numpy.ma.core import angle
-from openpyxl.utils import range_boundaries
+import random
 
 turtle = Turtle()
 turtle.shape('turtle')
@@ -17,13 +15,20 @@ turtle.shape('turtle')
 #     turtle.forward(20)
 #     turtle.pendown()
 
+color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'DarkGoldenrod1', 'OrangeRed3', 'lavender blush', 'misty rose', 'dark slate gray']
+
 def drawShape(noOfSides):
-    for i in noOfSides:
+
+    for i in range(noOfSides):
         angle = 360 / noOfSides
         turtle.forward(100)
         turtle.rt(angle)
 
+def mainTurtle():
+    for i in range(3,11):
+        drawShape(i)
 
+mainTurtle()
 
 
 
