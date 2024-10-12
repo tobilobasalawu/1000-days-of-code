@@ -15,7 +15,7 @@ turtle.shape('turtle')
 #     turtle.forward(20)
 #     turtle.pendown()
 
-color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'DarkGoldenrod1', 'OrangeRed3', 'lavender blush', 'misty rose', 'dark slate gray']
+color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'DarkGoldenrod1', 'OrangeRed3', 'tomato', 'green', 'dark slate gray']
 
 def drawShape(noOfSides):
     turtle.color(random.choice(color))
