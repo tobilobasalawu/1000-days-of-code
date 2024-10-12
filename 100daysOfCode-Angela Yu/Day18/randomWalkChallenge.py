@@ -10,7 +10,9 @@ pos = [0, 90, 180, 270]
 for i in range(200):
     turtle.color(random.choice(color))
     turtle.pensize(10)
-
+    turtle.speed('fastest')
+    turtle.forward(30)
+    turtle.setheading(random.choice(pos))
 
 screen = Screen()
 screen.exitonclick()
