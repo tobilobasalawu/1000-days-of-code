@@ -8,6 +8,8 @@ pos = [0, 90, 180, 270]
 
 
 for i in range(200):
+    turtle.color(random.choice(color))
+    turtle.pensize(10)
 
 
 screen = Screen()
