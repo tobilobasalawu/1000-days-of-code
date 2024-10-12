@@ -5,10 +5,12 @@ color = ["red", 'yellow', 'black', 'blue', 'dark salmon', 'dark sea green', 'Dar
 
 turtle = Turtle()
 
-
-
-
-
+turtle.color(random.choice(color))
+turtle.pensize(10)
+turtle.forward(30)
+turtle.lt(90)
+turtle.forward(30)
+turtle.rt(90)
 
 
 screen = Screen()
