@@ -10,3 +10,5 @@ for color in colors:
 
     colorRange = (r, g, b)
     colorStorage.append(colorRange)
+
+print(colorStorage)
