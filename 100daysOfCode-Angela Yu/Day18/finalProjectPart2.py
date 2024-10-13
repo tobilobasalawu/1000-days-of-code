@@ -12,7 +12,7 @@ t.speed('fastest')
 t.setheading(255)
 t.forward(300)
 t.setheading(0)
-numOfDots = 200
+numOfDots = 100
 
 for dotCount in range(1, numOfDots + 1):
     t.dot(20, random.choice(colorList))
@@ -25,6 +25,7 @@ for dotCount in range(1, numOfDots + 1):
         t.forward(10*50)
         t.setheading(0)
 
+t.hideturtle()
 
 
 
