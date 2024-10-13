@@ -9,3 +9,4 @@ for i in colors:
     b = colors.rgb.b
 
     colorRange = (r, g, b)
+    colorStorage.append(colorRange)
