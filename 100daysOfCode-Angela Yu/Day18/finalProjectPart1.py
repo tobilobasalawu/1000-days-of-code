@@ -1,12 +1,12 @@
 import colorgram
 
-colors = colorgram.extract("hirstPainting.jpg", 16)
+colors = colorgram.extract('hirstPainting.jpg', 16)
 colorStorage = []
 
-for i in colors:
-    r = colors.rgb.r
-    g = colors.rgb.g
-    b = colors.rgb.b
+for color in colors:
+    r = color.rgb.r
+    g = color.rgb.g
+    b = color.rgb.b
 
     colorRange = (r, g, b)
     colorStorage.append(colorRange)
