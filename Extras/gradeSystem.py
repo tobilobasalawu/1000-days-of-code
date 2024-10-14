@@ -35,7 +35,8 @@ if userId in studentData and userPassword == studentData[userId]:
     print("\nGrades Allocated✅")
 
     encryptedPassword = key.caesar_encipher(userPassword, 4)
-    with open("Output.txt", 'x+') as file:
-        file.write(f"Name: {userName}\nID: {userId}\nPassword: {encryptedPassword}")
+    try:
+        with open("Output.txt", 'x+') as file:
+            file.write(f"Name: {userName}\nID: {userId}\nPassword: {encryptedPassword}")
 else:
     print('\nIncorrect ID or Password')
