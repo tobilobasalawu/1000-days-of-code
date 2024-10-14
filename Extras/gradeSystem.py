@@ -1,4 +1,4 @@
-from cryptography.fernet import Fernet
+import pycaesarcipher
 
 studentData = {
     's45561076' : '4321',
@@ -10,7 +10,6 @@ studentData = {
 userName = input("Enter Full Name: ")
 userId = input("Enter ID: ").lower()
 userPassword = input("Enter your password: ")
-key = userPassword
 
 studentCount = 1
 gradingScore = ''
@@ -34,8 +33,7 @@ if userId in studentData and userPassword == studentData[userId]:
             print("'F'")
     print("\nGrades Allocated✅")
 
-
     with open("Output.txt", 'x+') as file:
-        file.write(f"Name: {userName}\nID: {userId}\nPassword")
+        file.write(f"Name: {userName}\nID: {userId}\nPassword: {encryptedPassword}")
 else:
     print('\nIncorrect ID or Password')
