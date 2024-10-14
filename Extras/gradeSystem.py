@@ -30,5 +30,8 @@ if userId in studentData and userPassword == studentData[userId]:
             gradingScore = 'F'
             print("'F'")
     print("\nGrades Allocated✅")
+
+    with open("Output.txt", 'x+') as file:
+        file.write(f"Name: {userName}\nID: {userId}\nPassword")
 else:
     print('\nIncorrect ID or Password')
