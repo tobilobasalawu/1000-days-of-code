@@ -1,7 +1,5 @@
 import pycaesarcipher
 
-from Hackerrank.diagonalDifference import result
-
 studentData = {
     's45561076' : 'password',
     's45558799' : 'password',
@@ -11,7 +9,7 @@ studentData = {
 
 userName = input("Enter Full Name: ")
 userId = input("Enter ID: ").lower()
-userPassword = input("Enter your password: ")
+userPassword = input("Enter your password: ").lower()
 key = pycaesarcipher.pycaesarcipher()
 
 gradingScore = ''
@@ -48,7 +46,7 @@ def gradingCalaculation():
         print('\nIncorrect ID or Password')
 
 def programResultOutput():
-    result = f"Name: {userName}\nID: {userId}\nPassword(encrypted): {encryptedPassword}\nGrades: {gradingScore}"
+    result = f"Name: {userName}\nID: {userId}\nPassword(encrypted): {encryptedPassword}\nGrades: {gradingData}"
     try:
         with open("Output.txt", 'x+') as file:
             file.write(result)
