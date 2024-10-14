@@ -19,7 +19,7 @@ encryptedPassword = key.caesar_encipher(userPassword, 4)
 def gradingCalaculation():
     studentCount = 1
     if userId in studentData and userPassword == studentData[userId]:
-        print("\nWelcome to the Grading system📈")
+        print("\nWelcome to the School Grading system📈")
         studentNumber = int(input("How many Students grades are to be calculated: "))
         while studentCount <= studentNumber:
             grade = int(input("\nEnter your score: "))
@@ -53,6 +53,8 @@ def programResultOutput():
     except FileExistsError:
         with open("Output.txt", 'a+') as file:
             file.write(result)
+    finally:
+        print("\nOutput Saved💾")
 
 gradingCalaculation()
 

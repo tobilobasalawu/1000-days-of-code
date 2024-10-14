@@ -1,0 +1,4 @@
+Name: Oluwatobi Salawu
+ID: s45590908
+Password(encrypted): tewwasvh
+Grades: ['B', 'D', 'A', 'F']
