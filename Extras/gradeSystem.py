@@ -1,5 +1,3 @@
-from gc import garbage
-
 studentData = {
     's45561076' : '4321',
     's45558799' : '4321',
@@ -11,7 +9,7 @@ userName = input("Enter Full Name: ")
 userId = input("Enter ID: ").lower()
 userPassword = input("Enter your password: ")
 
-studentCount = 0
+studentCount = 1
 gradingScore = ''
 if userId in studentData and userPassword == studentData[userId]:
     print("\nWelcome to the Grading system📈")
@@ -31,5 +29,6 @@ if userId in studentData and userPassword == studentData[userId]:
         else:
             gradingScore = 'F'
             print("'F'")
+    print("\nGrades Allocated✅")
 else:
     print('\nIncorrect ID or Password')
