@@ -5,3 +5,7 @@ studentData = {
     's45590908' : '4321'
 }
 
+userName = input("Enter Full Name: ")
+userId = input("Enter ID: ")
+userPassword = input("Enter your password: ")
+
