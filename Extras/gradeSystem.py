@@ -1,5 +1,7 @@
 import pycaesarcipher
 
+from Hackerrank.diagonalDifference import result
+
 studentData = {
     's45561076' : 'password',
     's45558799' : 'password',
@@ -12,9 +14,10 @@ userId = input("Enter ID: ").lower()
 userPassword = input("Enter your password: ")
 key = pycaesarcipher.pycaesarcipher()
 
-studentCount = 1
+
 gradingScore = ''
 def gradingCalaculation():
+    studentCount = 1
     if userId in studentData and userPassword == studentData[userId]:
         print("\nWelcome to the Grading system📈")
         studentNumber = int(input("How many Students grades are to be calculated: "))
@@ -44,4 +47,8 @@ def gradingCalaculation():
 def programResultOutput():
     try:
         with open("Output.txt", 'x+') as file:
-            file.write("")
+            file.write(result)
+    except FileExistsError:
+        with open("Output.txt", 'a') as file:
+            file.write(result)
+
