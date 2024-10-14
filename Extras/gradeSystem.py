@@ -1,3 +1,5 @@
+
+
 studentData = {
     's45561076' : '4321',
     's45558799' : '4321',
@@ -6,6 +8,9 @@ studentData = {
 }
 
 userName = input("Enter Full Name: ")
-userId = input("Enter ID: ")
+userId = input("Enter ID: ").lower()
 userPassword = input("Enter your password: ")
 
+if userId in studentData and userPassword == studentData[userId]:
+    print("\nWelcome to the Grading system📈")
+    studentNumber = int(input("How many Students grades are to be calculated: "))
