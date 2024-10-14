@@ -1,15 +1,16 @@
 import pycaesarcipher
 
 studentData = {
-    's45561076' : '4321',
-    's45558799' : '4321',
-    's45597382' : '4321',
-    's45590908' : '4321'
+    's45561076' : 'password',
+    's45558799' : 'password',
+    's45597382' : 'password',
+    's45590908' : 'password'
 }
 
 userName = input("Enter Full Name: ")
 userId = input("Enter ID: ").lower()
 userPassword = input("Enter your password: ")
+key = pycaesarcipher.pycaesarcipher()
 
 studentCount = 1
 gradingScore = ''
@@ -33,6 +34,7 @@ if userId in studentData and userPassword == studentData[userId]:
             print("'F'")
     print("\nGrades Allocated✅")
 
+    encryptedPassword = key.caesar_encipher(userPassword, 4)
     with open("Output.txt", 'x+') as file:
         file.write(f"Name: {userName}\nID: {userId}\nPassword: {encryptedPassword}")
 else:
