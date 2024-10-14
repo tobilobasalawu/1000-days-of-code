@@ -14,29 +14,34 @@ key = pycaesarcipher.pycaesarcipher()
 
 studentCount = 1
 gradingScore = ''
-if userId in studentData and userPassword == studentData[userId]:
-    print("\nWelcome to the Grading system📈")
-    studentNumber = int(input("How many Students grades are to be calculated: "))
-    while studentCount <= studentNumber:
-        grade = int(input("\nEnter your score: "))
-        studentCount+=1
-        if grade >= 90:
-            gradingScore = 'A'
-            print("\n'A'")
-        elif grade >= 80:
-            gradingScore = 'B'
-            print("\n'B'")
-        elif grade >= 60:
-            gradingScore = 'D'
-            print("\n'D'")
-        else:
-            gradingScore = 'F'
-            print("'F'")
-    print("\nGrades Allocated✅")
+def gradingCalaculation():
+    if userId in studentData and userPassword == studentData[userId]:
+        print("\nWelcome to the Grading system📈")
+        studentNumber = int(input("How many Students grades are to be calculated: "))
+        while studentCount <= studentNumber:
+            grade = int(input("\nEnter your score: "))
+            studentCount+=1
+            if grade >= 90:
+                gradingScore = 'A'
+                print("\n'A'")
+            elif grade >= 80:
+                gradingScore = 'B'
+                print("\n'B'")
+            elif grade >= 60:
+                gradingScore = 'D'
+                print("\n'D'")
+            else:
+                gradingScore = 'F'
+                print("'F'")
+        print("\nGrades Allocated✅")
 
-    encryptedPassword = key.caesar_encipher(userPassword, 4)
+        encryptedPassword = key.caesar_encipher(userPassword, 4)
+        result = f"Name: {userName}\nID: {userId}\nPassword: {encryptedPassword}"
+
+    else:
+        print('\nIncorrect ID or Password')
+
+def programResultOutput():
     try:
         with open("Output.txt", 'x+') as file:
-            file.write(f"Name: {userName}\nID: {userId}\nPassword: {encryptedPassword}")
-else:
-    print('\nIncorrect ID or Password')
+            file.write("")
