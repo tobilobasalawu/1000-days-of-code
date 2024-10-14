@@ -16,8 +16,8 @@ gradingScore = ''
 if userId in studentData and userPassword == studentData[userId]:
     print("\nWelcome to the Grading system📈")
     studentNumber = int(input("How many Students grades are to be calculated: "))
-    grade = int(input("\nEnter your score: "))
     while studentCount <= studentNumber:
+        grade = int(input("\nEnter your score: "))
         studentCount+=1
         if grade >= 90:
             gradingScore = 'A'
@@ -31,3 +31,5 @@ if userId in studentData and userPassword == studentData[userId]:
         else:
             gradingScore = 'F'
             print("'F'")
+else:
+    print('\nIncorrect ID or Password')
