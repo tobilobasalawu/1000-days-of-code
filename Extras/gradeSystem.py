@@ -22,24 +22,25 @@ def gradingCalaculation():
         print("\nWelcome to the School Grading system📈")
         studentNumber = int(input("How many Students grades are to be calculated: "))
         while studentCount <= studentNumber:
-            grade = int(input("\nEnter your score: "))
-            studentCount+=1
-            if grade >= 90:
-                gradingScore = 'A'
-                print("\n'A'")
-                gradingData.append(gradingScore)
-            elif grade >= 80:
-                gradingScore = 'B'
-                print("\n'B'")
-                gradingData.append(gradingScore)
-            elif grade >= 60:
-                gradingScore = 'D'
-                print("\n'D'")
-                gradingData.append(gradingScore)
-            else:
-                gradingScore = 'F'
-                print("'F'")
-                gradingData.append(gradingScore)
+            for i in range(1, studentNumber+1):
+                grade = int(input(f"\nEnter number {i} student score: "))
+                studentCount+=1
+                if grade >= 90:
+                    gradingScore = 'A'
+                    print("\n'A'")
+                    gradingData.append(gradingScore)
+                elif grade >= 80:
+                    gradingScore = 'B'
+                    print("\n'B'")
+                    gradingData.append(gradingScore)
+                elif grade >= 60:
+                    gradingScore = 'D'
+                    print("\n'D'")
+                    gradingData.append(gradingScore)
+                else:
+                    gradingScore = 'F'
+                    print("'F'")
+                    gradingData.append(gradingScore)
         print("\nGrades Allocated✅")
         programResultOutput()
     else:
