@@ -5,4 +5,13 @@ def addNumbers(*args):
     total += i
   print(total)
 
-addNumbers(856, 6986)
+#addNumbers(856, 6986)
+
+def calculate(n, **kwargs):
+#  for key,value in kwargs.items():
+ #   print(value)
+  n += kwargs['add']
+  n *= kwargs['multiply']
+  print(n)
+
+calculate(2, add = 4, multiply = 1)
