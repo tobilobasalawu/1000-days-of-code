@@ -24,6 +24,7 @@ class Car():
     self.make = kwargs['make']
     self.model = kwargs['model']
     self.year = kwargs['year']
+    self.color = kwargs['color']
 
-myCar = Car(make = "BMW", model = 'i7', year = '2023')
-print(myCar.make,myCar.model,myCar.year)
+myCar = Car(make = "BMW", model = 'i7', year = '2023', color = 'black')
+print(f"Make = {myCar.make}\nModel = {myCar.model}\nYear = {myCar.year}\nColor = {myCar.color}")
