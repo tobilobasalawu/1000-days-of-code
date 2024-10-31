@@ -14,6 +14,7 @@ myLabel.config(text = 'New Text') #updating the text of a component using config
 
 def buttonClicked():
   print('I got clicked')
+  myLabel['text'] = 'Button Got Clicked!'
 
 button = tkinter.Button(text='Click Me', command=buttonClicked) #command - event listener, enter the functions name
 button.pack() 
