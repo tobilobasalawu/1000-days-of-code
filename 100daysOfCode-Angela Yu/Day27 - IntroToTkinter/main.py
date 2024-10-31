@@ -12,8 +12,10 @@ myLabel.pack(side='left')
 myLabel['text'] = 'New Text' #updating the text of a component by using dict keys
 myLabel.config(text = 'New Text') #updating the text of a component using config method
 
+def buttonClicked():
+  print('I got clicked')
 
-button = tkinter.Button(text='Click Me')
+button = tkinter.Button(text='Click Me', command=buttonClicked) #command - event listener, enter the functions name
 button.pack() 
 
 window.mainloop()
