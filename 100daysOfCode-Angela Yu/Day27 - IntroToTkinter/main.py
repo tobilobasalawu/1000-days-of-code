@@ -17,6 +17,10 @@ def buttonClicked():
   myLabel['text'] = 'Button Got Clicked!'
 
 button = tkinter.Button(text='Click Me', command=buttonClicked) #command - event listener, enter the functions name
-button.pack() 
+button.pack()
+
+#Entry - Input 
+userInput = tkinter.Entry()
+userInput.pack()
 
 window.mainloop()
