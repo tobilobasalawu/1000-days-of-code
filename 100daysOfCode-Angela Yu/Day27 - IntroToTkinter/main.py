@@ -14,13 +14,14 @@ myLabel.config(text = 'New Text') #updating the text of a component using config
 
 def buttonClicked():
   print('I got clicked')
-  myLabel['text'] = 'Button Got Clicked!'
+  myLabel['text'] = userInput.get()
 
 button = tkinter.Button(text='Click Me', command=buttonClicked) #command - event listener, enter the functions name
 button.pack()
 
 #Entry - Input 
-userInput = tkinter.Entry()
+userInput = tkinter.Entry(width=10)
 userInput.pack()
+#print(userInput.get()) # return input
 
 window.mainloop()
