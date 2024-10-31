@@ -14,4 +14,16 @@ def calculate(n, **kwargs):
   n *= kwargs['multiply']
   print(n)
 
-calculate(2, add = 4, multiply = 1)
+#calculate(2, add = 4, multiply = 1)
+
+
+#using class
+
+class Car():
+  def __init__(self, **kwargs):
+    self.make = kwargs['make']
+    self.model = kwargs['model']
+    self.year = kwargs['year']
+
+myCar = Car(make = "BMW", model = 'i7', year = '2023')
+print(myCar.make,myCar.model,myCar.year)
